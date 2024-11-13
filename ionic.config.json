@@ -1,0 +1,7 @@
+{
+  "name": "GoPull-Customer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex">
+        <div class="text_box">
+            <h2 class="d-flex">{{'my_vehicle' | translate}}</h2>
+            <h3>{{'vehicles_you_own' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/myvehicle.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="add_new_vehicles" (click)="add_vehicles()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-plus"></ion-icon>
+                <div class="text_box">
+                    <h2 class="d-flex">{{'add_new_vehicles' | translate}}</h2>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="item_list">
+            <ion-item class="animate__animated animate__fadeInUp" (click)="add_vehicles()">
+                <div class="item_inner d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">Toyota Matrix</h2>
+                        <h3>Hatchback | NYC55142</h3>
+                        <h3>4 {{'seats' | translate}}</h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/vehicles/ic_car.png"> </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="add_vehicles()">
+                <div class="item_inner d-flex">
+                    <div class="text_box">
+                        <h2 class="d-flex">RNX Dulex</h2>
+                        <h3>Regular Bike | NYC11241</h3>
+                        <h3>1 {{'seats' | translate}}</h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/vehicles/ic_bike.png"> </div>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'add_vehicle' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form animate__animated animate__fadeInUp">
+        <ion-list lines="none">
+            <ion-card>
+                <ion-row style="align-items: flex-end; margin-bottom: 30px;">
+                    <ion-col size="8">
+                        <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                            <div class="item_inner">
+                                <ion-label>{{'vehicle_type' | translate}}</ion-label>
+                                <div class="input_box d-flex " style="align-items: flex-end; ">
+                                    <ion-select style="min-width: fit-content; " [(ngModel)]="vehicle_type " placeholder="{{ 'select_vehicle_type' | translate}} " cancelText="{{ 'cancel' | translate}} " okText="{{ 'ok' | translate}} ">
+                                        <ion-select-option value="1 ">Hatchbacks</ion-select-option>
+                                        <ion-select-option value="2 ">Sedan</ion-select-option>
+                                        <ion-select-option value="3 ">SUV</ion-select-option>
+                                        <ion-select-option value="4 ">MUV</ion-select-option>
+                                        <ion-select-option value="5 ">Coupe</ion-select-option>
+                                        <ion-select-option value="6 ">Convertibles</ion-select-option>
+                                        <ion-select-option value="7 ">Toyotal Matrix</ion-select-option>
+                                    </ion-select>
+                                    <ion-icon class="zmdi zmdi-caret-down ion-text-end "></ion-icon>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size="4" class="d-flex">
+                        <div class="img_section end ">
+                            <img src="assets/images/vehicles/ic_car.png ">
+                            <ion-icon class="zmdi zmdi-camera ion-text-center "></ion-icon>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                    <div class="item_inner ">
+                        <ion-label>{{'vehicle_name' | translate}}</ion-label>
+                        <div class="input_box d-flex ">
+                            <ion-input mode="md " type="name " placeholder="{{ 'enter_vehicle_name' | translate}} " value="Toyotal Matrix "></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                    <div class="item_inner ">
+                        <ion-label>{{'vehicle_reg_number' | translate}}</ion-label>
+                        <div class="input_box d-flex ">
+                            <ion-input mode="md " type="name " placeholder="{{ 'enter_vehicle_reg_number' | translate}} " value="NYC55142 "></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-card>
+
+            <ion-card>
+                <ion-item class="animate__animated animate__fadeInUp no-border " lines="none ">
+                    <div class="item_inner ">
+                        <ion-label>{{'seats_offering' | translate}}</ion-label>
+                        <div class="seats_offering d-flex ">
+                            <h3 [ngClass]="faqExpand1 ? 'active' : '' " (click)="faqExpandToggle1() ">1</h3>
+                            <h3 [ngClass]="faqExpand2 ? 'active' : '' " (click)="faqExpandToggle2() ">2</h3>
+                            <h3 [ngClass]="faqExpand3 ? 'active' : '' " (click)="faqExpandToggle3() ">3</h3>
+                            <h3 [ngClass]="faqExpand4 ? 'active' : '' " (click)="faqExpandToggle4() ">4</h3>
+                            <h3 [ngClass]="faqExpand5 ? 'active' : '' " (click)="faqExpandToggle5() ">5</h3>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-card>
+
+            <ion-card>
+                <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                    <div class="item_inner ">
+                        <ion-label>{{'facilities' | translate}} (i.e AC, {{'extra_luggage' | translate}}, {{'etc' | translate}})</ion-label>
+                        <div class="input_box d-flex ">
+                            <ion-input mode="md " type="text " placeholder="{{ 'enter_facilities' | translate}} " value="AC, Luggage Space, Music System "></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                    <div class="item_inner ">
+                        <ion-label>{{'intructions' | translate}} (i.e {{'no_smoking_pets' | translate}})</ion-label>
+                        <div class="input_box d-flex ">
+                            <ion-input mode="md " type="text " placeholder="{{ 'enter_intructions' | translate}} " value="Smoking Not Allowed, Pets are allowed "></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>
+
+
+<ion-footer class="ion-no-border ">
+    <ion-button size="large " class="btn animate__animated animate__fadeInUp " style="--animate-duration: .4s; " expand="round ">{{'continue' | translate}}</ion-button>
+</ion-footer>
